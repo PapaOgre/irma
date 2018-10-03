@@ -111,8 +111,6 @@ Pane {
 		repeat: true
 		onTriggered: {
 			request("https://samples.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + key, function(response) {
-				console.log(response.responseText);
-
 				if (response.responseText != "")
 					meteo_data = JSON.parse(response.responseText);
 			})
